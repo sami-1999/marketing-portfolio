@@ -1,0 +1,395 @@
+{
+  "personalInfo": {
+    "name": "SARA KHAN",
+    "title": "Social Media Marketing & IT Solutions Expert",
+    "subtitle": "Helping brands grow with social media marketing & IT solutions",
+    "email": "sara.khan@digitalservices.com",
+    "phone": "+923001234567",
+    "location": "Pakistan",
+    "profileName": "Sara Khan",
+    "avatar": "/avatar-main.png",
+    "whatsappNumber": "923001234567",
+    "resumePath": "/Sara Khan Resume.pdf",
+    "github": "https://github.com/sara-khan-digital",
+    "linkedin": "https://linkedin.com/in/sara-khan-digital"
+  },
+  "professionalSummary": {
+    "text": "Creative Social Media Marketing Executive with 4+ years of experience driving brand growth through strategic digital campaigns. Expert in content creation, community management, and data-driven marketing strategies across all major social platforms. Proven track record of increasing engagement rates by 300%+ and generating qualified leads through targeted social media advertising and influencer partnerships.",
+    "stats": {
+      "yearsExperience": "4+",
+      "projectsCompleted": "150+",
+      "apiIntegrations": "25+"
+    }
+  },
+  "skills": {
+    "coreExpertise": [
+      "Social Media Strategy",
+      "Content Creation",
+      "Facebook Ads",
+      "Instagram Marketing",
+      "Analytics & Reporting",
+      "Brand Management"
+    ],
+    "technical": {
+      "Social Media Platforms": ["Facebook", "Instagram", "Twitter/X", "LinkedIn", "TikTok", "YouTube", "Pinterest"],
+      "Marketing Tools": [
+        "Meta Business Suite",
+        "Hootsuite",
+        "Buffer",
+        "Canva",
+        "Adobe Creative Suite",
+        "Later"
+      ],
+      "Analytics & Reporting": ["Google Analytics", "Facebook Analytics", "Instagram Insights", "Sprout Social", "Brandwatch"],
+      "Advertising Platforms": ["Facebook Ads Manager", "Google Ads", "LinkedIn Ads", "Twitter Ads"]
+    },
+    "apiIntegrations": [
+      {
+        "name": "Meta Business",
+        "description": "Facebook & Instagram Marketing",
+        "logo": "https://about.meta.com/brand/resources/meta/company-brand/"
+      },
+      {
+        "name": "Google Analytics",
+        "description": "Web Analytics & Tracking",
+        "logo": "https://developers.google.com/analytics/images/terms/logo_lockup_analytics_icon_vertical_black_2x.png"
+      },
+      {
+        "name": "Hootsuite",
+        "description": "Social Media Management",
+        "logo": "https://hootsuite.com/dist/images/logos/hootsuite-logo-black.svg"
+      },
+      {
+        "name": "Mailchimp",
+        "description": "Email Marketing Integration",
+        "logo": "https://eep.io/images/yzco4xsimv0y/SBb2fL2oDYoqoJu0F2XeS/a4f9b4b6c8b8c8c8c8c8c8c8c8c8c8c8/mc_freddie_yellow.svg"
+      },
+      {
+        "name": "Canva",
+        "description": "Design & Content Creation",
+        "logo": "https://www.canva.com/img/logos/canva-logos_2018_portrait_white.png"
+      },
+      {
+        "name": "Buffer",
+        "description": "Social Media Scheduling",
+        "logo": "https://buffer.com/static/logos/buffer-logo-blue.svg"
+      },
+      {
+        "name": "Zapier",
+        "description": "Marketing Automation",
+        "logo": "https://cdn.zapier.com/storage/photos/9dd0f13a3e72b0c44e6b7c6c8b6b6b6b/zapier-logo-blue.svg"
+      },
+      {
+        "name": "HubSpot",
+        "description": "CRM & Marketing Hub",
+        "logo": "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png"
+      },
+      {
+        "name": "Shopify",
+        "description": "E-commerce Integration",
+        "logo": "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify_logo_darkbg.svg"
+      },
+      {
+        "name": "WordPress",
+        "description": "Content Management",
+        "logo": "https://s.w.org/style/images/about/WordPress-logotype-wmark.png"
+      },
+      {
+        "name": "Stripe",
+        "description": "Payment Processing",
+        "logo": "https://images.ctfassets.net/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg"
+      },
+      {
+        "name": "Google Ads",
+        "description": "Search & Display Advertising",
+        "logo": "https://developers.google.com/ads/images/ads_logo_blue.svg"
+      },
+      {
+        "name": "LinkedIn API",
+        "description": "Professional Network Marketing",
+        "logo": "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+      },
+      {
+        "name": "TikTok Ads",
+        "description": "Short-form Video Advertising",
+        "logo": "https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/webapp-desktop/8152caf0c8e8bc67ae0d.png"
+      }
+    ],
+    "contentCreation": [
+      {
+        "name": "Adobe Photoshop",
+        "description": "Advanced Photo Editing",
+        "logo": "https://www.adobe.com/content/dam/cc/icons/photoshop.svg"
+      },
+      {
+        "name": "Adobe Illustrator",
+        "description": "Vector Graphics Design",
+        "logo": "https://www.adobe.com/content/dam/cc/icons/illustrator.svg"
+      },
+      {
+        "name": "Canva Pro",
+        "description": "Quick Design Solutions",
+        "logo": "https://www.canva.com/img/logos/canva-logos_2018_portrait_white.png"
+      },
+      {
+        "name": "Figma",
+        "description": "UI/UX Design",
+        "logo": "https://www.figma.com/blog/wp-content/uploads/2022/06/f_logo_RGB.svg"
+      }
+    ],
+    "zohoExperience": [
+      {
+        "name": "Zoho Social",
+        "description": "Social Media Management",
+        "logo": "https://www.zoho.com/social/images/zoho-social-logo.png"
+      },
+      {
+        "name": "Zoho CRM",
+        "description": "Customer Relationship Management",
+        "logo": "https://www.zoho.com/crm/images/zoho-crm-logo.png"
+      },
+      {
+        "name": "Zoho Campaigns",
+        "description": "Email Marketing Platform",
+        "logo": "https://www.zoho.com/campaigns/images/zoho-campaigns-logo.png"
+      }
+    ],
+    "other": {
+      "Marketing Specialties": ["Influencer Marketing", "Community Management", "Brand Partnerships", "Crisis Management"],
+      "Content Types": ["Video Content", "Graphic Design", "Copywriting", "Photography"],
+      "Soft Skills": [
+        "Creative Thinking",
+        "Strategic Planning",
+        "Client Communication",
+        "Trend Analysis"
+      ]
+    }
+  },
+  "services": [
+    {
+      "title": "Social Media Strategy & Management",
+      "description": "Comprehensive social media strategy development and daily management across all major platforms to build your brand presence and engage your audience.",
+      "features": [
+        "Custom social media strategy development",
+        "Daily content posting and scheduling",
+        "Community management and engagement",
+        "Brand voice and tone development",
+        "Competitor analysis and market research"
+      ],
+      "platforms": ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok"],
+      "pricing": "Starting from $800/month"
+    },
+    {
+      "title": "Paid Social Media Advertising",
+      "description": "Data-driven paid advertising campaigns designed to maximize ROI and drive qualified leads through targeted social media advertising.",
+      "features": [
+        "Facebook & Instagram Ads management",
+        "Google Ads campaign setup and optimization",
+        "LinkedIn advertising for B2B targeting",
+        "TikTok Ads for younger demographics",
+        "A/B testing and performance optimization"
+      ],
+      "platforms": ["Meta Ads", "Google Ads", "LinkedIn Ads", "TikTok Ads"],
+      "pricing": "Starting from $1200/month + ad spend"
+    },
+    {
+      "title": "Content Creation & Design",
+      "description": "Professional content creation including graphics, videos, and copywriting that aligns with your brand identity and engages your target audience.",
+      "features": [
+        "Custom graphic design and branding",
+        "Video content creation and editing",
+        "Professional copywriting and captions",
+        "Photography and visual content",
+        "Brand guidelines development"
+      ],
+      "platforms": ["All Social Platforms", "Website", "Email Marketing"],
+      "pricing": "Starting from $600/month"
+    },
+    {
+      "title": "Influencer Marketing Campaigns",
+      "description": "End-to-end influencer marketing campaign management from influencer discovery to campaign execution and performance tracking.",
+      "features": [
+        "Influencer research and outreach",
+        "Campaign strategy and planning",
+        "Contract negotiation and management",
+        "Content approval and quality control",
+        "Performance tracking and ROI analysis"
+      ],
+      "platforms": ["Instagram", "TikTok", "YouTube", "Twitter"],
+      "pricing": "Starting from $1000/campaign"
+    },
+    {
+      "title": "Analytics & Reporting",
+      "description": "Comprehensive analytics and reporting services to track performance, measure ROI, and optimize your social media marketing efforts.",
+      "features": [
+        "Monthly performance reports",
+        "ROI and conversion tracking",
+        "Audience insights and demographics",
+        "Competitor benchmarking",
+        "Strategic recommendations"
+      ],
+      "platforms": ["All Platforms", "Google Analytics", "Custom Dashboards"],
+      "pricing": "Starting from $400/month"
+    },
+    {
+      "title": "Social Media Consultation",
+      "description": "Expert consultation services for businesses looking to improve their social media presence with strategic guidance and best practices.",
+      "features": [
+        "Social media audit and assessment",
+        "Strategy development and planning",
+        "Team training and workshops",
+        "Best practices implementation",
+        "Ongoing strategic support"
+      ],
+      "platforms": ["Strategy Focused", "All Platforms"],
+      "pricing": "$150/hour or custom packages"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Social Media Marketing Executive",
+      "company": "Digital Growth Agency",
+      "period": "Jan 24 - Present",
+      "location": "Pakistan",
+      "type": "Current",
+      "achievements": [
+        "Managed social media accounts for 15+ clients across various industries, achieving an average engagement rate increase of 300% and follower growth of 250%.",
+        "Developed and executed comprehensive social media strategies that generated over $500K in revenue for clients through targeted advertising campaigns.",
+        "Led influencer marketing campaigns with 50+ influencers, resulting in 2M+ impressions and 15% average conversion rate.",
+        "Created and managed content calendars, producing 200+ pieces of engaging content monthly across all major social platforms."
+      ]
+    },
+    {
+      "title": "Social Media Marketing Specialist",
+      "company": "Creative Marketing Solutions",
+      "period": "Mar 22 - Dec 23",
+      "location": "Pakistan",
+      "type": "Full-time",
+      "achievements": [
+        "Specialized in Facebook and Instagram advertising, managing monthly ad budgets of $50K+ with average ROAS of 4.5x.",
+        "Developed viral content strategies that achieved 1M+ organic reach and increased brand awareness by 400% for key clients.",
+        "Implemented social media automation tools and workflows, reducing manual posting time by 70% while maintaining content quality.",
+        "Conducted comprehensive social media audits and competitor analysis for 30+ brands, providing actionable insights for growth."
+      ]
+    },
+    {
+      "title": "Digital Marketing Associate",
+      "company": "Brand Boost Marketing",
+      "period": "Jun 21 - Feb 22",
+      "location": "Pakistan",
+      "type": "Full-time",
+      "achievements": [
+        "Managed daily social media operations for 8 client accounts, consistently exceeding engagement and growth targets by 150%.",
+        "Created and optimized Google Ads campaigns that generated 500+ qualified leads monthly with 25% lower cost-per-acquisition.",
+        "Collaborated with design team to produce high-converting visual content, resulting in 40% improvement in click-through rates."
+      ]
+    },
+    {
+      "title": "Social Media Coordinator",
+      "company": "StartUp Marketing Hub",
+      "period": "Jan 21 - May 21",
+      "location": "Pakistan",
+      "type": "Full-time",
+      "achievements": [
+        "Assisted in managing social media presence for emerging startups, helping 5 companies achieve their first 10K followers within 6 months.",
+        "Developed content creation workflows and brand guidelines that improved content consistency and brand recognition by 60%."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-commerce Brand Social Media Transformation",
+      "description": "Complete social media overhaul for a fashion e-commerce brand, resulting in 500% follower growth, 300% engagement increase, and $200K+ in social commerce sales within 6 months.",
+      "metrics": "500% follower growth, $200K+ revenue generated",
+      "status": "Completed"
+    },
+    {
+      "title": "Restaurant Chain Digital Marketing Campaign",
+      "description": "Multi-platform marketing campaign for a restaurant chain featuring user-generated content, influencer partnerships, and targeted advertising that increased foot traffic by 40% and online orders by 250%.",
+      "metrics": "40% foot traffic increase, 250% online orders growth",
+      "status": "Completed"
+    },
+    {
+      "title": "Tech Startup Launch Campaign",
+      "description": "Comprehensive social media launch strategy for a tech startup, including pre-launch buzz creation, influencer partnerships, and community building that resulted in 50K+ app downloads in the first month.",
+      "metrics": "50K+ app downloads, 25K social media followers",
+      "status": "Completed"
+    },
+    {
+      "title": "Healthcare Brand Awareness Campaign",
+      "description": "Educational content marketing campaign for a healthcare provider, focusing on health awareness and community engagement, achieving 2M+ content views and establishing thought leadership in the industry.",
+      "metrics": "2M+ content views, 300% engagement increase",
+      "status": "Completed"
+    },
+    {
+      "title": "Real Estate Social Media Strategy",
+      "description": "Developed and executed a comprehensive social media strategy for a real estate agency, featuring virtual tours, client testimonials, and market insights that generated 100+ qualified leads monthly.",
+      "metrics": "100+ monthly leads, 400% engagement growth",
+      "status": "Ongoing"
+    },
+    {
+      "title": "Beauty Brand Influencer Campaign",
+      "description": "Managed a large-scale influencer marketing campaign for a beauty brand, coordinating with 30+ micro and macro influencers to achieve 5M+ impressions and 20% sales increase.",
+      "metrics": "5M+ impressions, 20% sales increase",
+      "status": "Completed"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Business Administration (BBA) - Marketing",
+      "institution": "University of Management Sciences",
+      "duration": "2018 - 2022",
+      "focus": "Digital Marketing & Consumer Behavior",
+      "coursework": ["Digital Marketing Strategy", "Consumer Psychology", "Brand Management", "Marketing Analytics"]
+    },
+    {
+      "degree": "Diploma in Digital Marketing",
+      "institution": "Google Digital Marketing Institute",
+      "duration": "2020 - 2021"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Facebook Certified Marketing Professional",
+      "issuer": "Meta Blueprint",
+      "date": "Mar 2024",
+      "description": "Advanced certification in Facebook and Instagram advertising, covering campaign optimization, audience targeting, and performance measurement."
+    },
+    {
+      "title": "Google Ads Certified Professional",
+      "issuer": "Google",
+      "date": "Jan 2024",
+      "description": "Comprehensive certification in Google Ads management, including search, display, video, and shopping campaigns."
+    },
+    {
+      "title": "HubSpot Content Marketing Certification",
+      "issuer": "HubSpot Academy",
+      "date": "Nov 2023",
+      "description": "Advanced content marketing strategies, content creation, and performance optimization certification."
+    },
+    {
+      "title": "Hootsuite Social Media Marketing Certification",
+      "issuer": "Hootsuite Academy",
+      "date": "Sep 2023",
+      "description": "Comprehensive social media marketing certification covering strategy, content creation, and analytics."
+    }
+  ],
+  "contact": {
+    "formTitle": "Let's Grow Your Brand Together",
+    "formDescription": "Ready to take your social media presence to the next level? I'm here to help you create engaging content, build meaningful connections, and drive real business results through strategic social media marketing.",
+    "messageTitle": "Get Your Free Consultation"
+  },
+  "footer": {
+    "copyright": "© 2025 Hooria Khan. All rights reserved. Transforming brands through strategic social media marketing."
+  },
+  "navigation": [
+    "Home",
+    "About",
+    "Services",
+    "Experience",
+    "Portfolio",
+    "Education",
+    "Certifications",
+    "Get in Touch"
+  ]
+}
