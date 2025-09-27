@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -168,7 +166,7 @@ export default function Home() {
       name: "Omar Sheikh",
       company: "Digital Health Clinic",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      text: "Sara&apos;s IT solutions and digital marketing expertise helped us modernize our practice. Patient engagement increased by 250% and our systems run flawlessly.",
+      text: "Sara's IT solutions and digital marketing expertise helped us modernize our practice. Patient engagement increased by 250% and our systems run flawlessly.",
       rating: 5,
       service: "IT Solutions + Marketing"
     },
@@ -176,7 +174,7 @@ export default function Home() {
       name: "Zara Khan",
       company: "Beauty Essentials",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-      text: "The e-commerce platform Sara built for us is incredible. Combined with her social media strategies, we&apos;ve seen 300% growth in online sales.",
+      text: "The e-commerce platform Sara built for us is incredible. Combined with her social media strategies, we've seen 300% growth in online sales.",
       rating: 5,
       service: "E-commerce + Social Media"
     }
@@ -209,89 +207,40 @@ export default function Home() {
     }
   };
 
-  // Services data with IT services included
-  const services = [
-    {
-      icon: faBullhorn,
-      title: "Social Media Marketing",
-      description: "Complete social media strategy, content creation, and community management to grow your brand presence.",
-      features: ["Strategy Development", "Content Creation", "Community Management", "Analytics & Reporting"],
-      color: "from-slate-600 to-slate-700"
-    },
-    {
-      icon: faChartLine,
-      title: "Paid Ads Management",
-      description: "ROI-focused advertising campaigns across Facebook, Instagram, Google, and LinkedIn platforms.",
-      features: ["Campaign Setup", "Audience Targeting", "A/B Testing", "Performance Optimization"],
-      color: "from-blue-600 to-slate-600"
-    },
-    {
-      icon: faCode,
-      title: "Website Development",
-      description: "Modern, responsive websites built with latest technologies to showcase your brand professionally.",
-      features: ["Responsive Design", "SEO Optimization", "Fast Loading", "Mobile-First Approach"],
-      color: "from-gray-600 to-slate-700"
-    },
-    {
-      icon: faServer,
-      title: "IT Support & Solutions",
-      description: "Comprehensive IT support including system maintenance, security, and technical consulting.",
-      features: ["System Maintenance", "Security Solutions", "Technical Consulting", "24/7 Support"],
-      color: "from-slate-700 to-gray-700"
-    }
-  ];
+  // Services data from portfolio.json with icons
+  const services = data.services.slice(0, 4).map((service, index) => {
+    const icons = [faBullhorn, faChartLine, faCode, faServer];
+    const colors = ["from-pink-500 to-rose-500", "from-blue-500 to-cyan-500", "from-purple-500 to-indigo-500", "from-green-500 to-emerald-500"];
+    
+    return {
+      icon: icons[index],
+      title: service.title,
+      description: service.description,
+      features: service.features,
+      color: colors[index]
+    };
+  });
 
-  // Portfolio/Case Studies data
-  const portfolioItems = [
-    {
-      title: "E-commerce Fashion Brand",
-      category: "Social Media + Web Dev",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=300&fit=crop",
-      results: "500% growth, $200K revenue",
-      description: "Complete digital transformation with custom website and social media strategy.",
-      tech: ["React", "Node.js", "Facebook Ads", "Instagram Marketing"]
-    },
-    {
-      title: "Tech Startup Platform",
-      category: "Full Stack Development",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      results: "50K+ users, 25K followers",
-      description: "Built scalable web platform with integrated social media marketing.",
-      tech: ["Next.js", "PostgreSQL", "AWS", "Social Media APIs"]
-    },
-    {
-      title: "Restaurant Chain Campaign",
-      category: "Digital Marketing",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop",
-      results: "40% traffic increase",
-      description: "Multi-platform marketing campaign with custom booking system.",
-      tech: ["WordPress", "Google Ads", "Facebook Marketing", "Analytics"]
-    },
-    {
-      title: "Healthcare IT System",
-      category: "IT Solutions",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop",
-      results: "99.9% uptime achieved",
-      description: "Secure patient management system with social media integration.",
-      tech: ["Python", "Django", "PostgreSQL", "Security Protocols"]
-    },
-    {
-      title: "Beauty Brand E-commerce",
-      category: "Web Dev + Marketing",
-      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=300&fit=crop",
-      results: "300% online sales boost",
-      description: "Custom e-commerce platform with integrated social commerce features.",
-      tech: ["Shopify", "React", "Instagram Shopping", "Influencer APIs"]
-    },
-    {
-      title: "Corporate IT Infrastructure",
-      category: "IT Support",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop",
-      results: "50% cost reduction",
-      description: "Complete IT infrastructure overhaul with cloud migration and security.",
-      tech: ["AWS", "Docker", "Kubernetes", "Security Solutions"]
-    }
-  ];
+  // Portfolio/Case Studies data from portfolio.json
+  const portfolioItems = data.projects.map((project, index) => {
+    const images = [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop"
+    ];
+    
+    return {
+      title: project.title,
+      category: project.status === "Completed" ? "Completed Project" : "Ongoing Project",
+      image: images[index % images.length],
+      results: project.metrics,
+      description: project.description,
+      tech: ["Social Media", "Digital Marketing", "Analytics", "Strategy"]
+    };
+  });
 
   // Pricing plans
   const pricingPlans = [
@@ -448,7 +397,7 @@ export default function Home() {
               >
                 I combine the power of social media marketing with cutting-edge IT solutions 
                 to help businesses thrive in the digital world. From building stunning websites 
-                to creating viral social campaigns, I&apos;ve got you covered.
+                to creating viral social campaigns, I've got you covered.
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4"
@@ -593,7 +542,7 @@ export default function Home() {
                 Where Creativity Meets Technology
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                With over 4 years of experience in digital marketing and IT solutions, I&apos;ve helped 150+ businesses 
+                With over 4 years of experience in digital marketing and IT solutions, I've helped 150+ businesses 
                 transform their digital presence. My unique approach combines data-driven marketing strategies 
                 with robust technical implementations.
               </p>
@@ -737,7 +686,7 @@ export default function Home() {
               Portfolio & Case Studies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real projects, real results - see how I&apos;ve helped businesses transform their digital presence
+              Real projects, real results - see how I've helped businesses transform their digital presence
             </p>
           </motion.div>
 
@@ -820,7 +769,7 @@ export default function Home() {
                   </div>
                   <FontAwesomeIcon icon={faQuoteLeft} className="text-4xl text-blue-500 mb-6" />
                   <p className="text-xl text-gray-700 mb-8 italic leading-relaxed">
-                    &ldquo;{testimonials[currentTestimonial].text}&rdquo;
+                   {testimonials[currentTestimonial].text}
                   </p>
                   <div className="flex items-center justify-center">
                     <img
