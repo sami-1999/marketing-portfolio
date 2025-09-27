@@ -8,38 +8,20 @@ import {
   faEnvelope,
   faPhone,
   faLocationDot,
-  faDownload,
   faPaperPlane,
   faUser,
-  faBuilding,
-  faCalendarDays,
   faRocket,
   faChartLine,
   faBullhorn,
-  faPalette,
   faCheck,
   faStar,
   faQuoteLeft,
-  faArrowRight,
-  faPlay,
-  faUsers,
-  faAward,
-  faTrophy,
   faHandshake,
   faCode,
   faServer,
-  faShieldAlt,
-  faMobile,
-  faLaptop,
-  faCloud,
   faDatabase,
   faCog,
-  faLightbulb,
-  faHeart,
   faEye,
-  faMousePointer,
-  faChevronLeft,
-  faChevronRight,
   faQuestionCircle,
   faComments,
 } from "@fortawesome/free-solid-svg-icons";
@@ -47,17 +29,9 @@ import {
   faWhatsapp,
   faGithub,
   faLinkedin,
-  faFacebook,
   faInstagram,
   faTwitter,
-  faYoutube,
-  faTiktok,
   faReact,
-  faNodeJs,
-  faPython,
-  faJs,
-  faHtml5,
-  faCss3,
 } from "@fortawesome/free-brands-svg-icons";
 import portfolioData from "../data/portfolio.json";
 import { PortfolioData } from "../types/portfolio";
@@ -172,13 +146,49 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Testimonials data
+  const testimonials = [
+    {
+      name: "Ahmed Hassan",
+      company: "Fashion Forward Co.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      text: "Sara transformed our entire digital presence. Her combination of technical skills and marketing expertise is unmatched. Our sales increased by 400%!",
+      rating: 5,
+      service: "Web Development + Social Media"
+    },
+    {
+      name: "Fatima Ali",
+      company: "TechStart Solutions",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+      text: "Working with Sara was a game-changer. She built our platform from scratch and created a marketing strategy that got us 50K users in 6 months.",
+      rating: 5,
+      service: "Full Stack Development"
+    },
+    {
+      name: "Omar Sheikh",
+      company: "Digital Health Clinic",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      text: "Sara&apos;s IT solutions and digital marketing expertise helped us modernize our practice. Patient engagement increased by 250% and our systems run flawlessly.",
+      rating: 5,
+      service: "IT Solutions + Marketing"
+    },
+    {
+      name: "Zara Khan",
+      company: "Beauty Essentials",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      text: "The e-commerce platform Sara built for us is incredible. Combined with her social media strategies, we&apos;ve seen 300% growth in online sales.",
+      rating: 5,
+      service: "E-commerce + Social Media"
+    }
+  ];
+
   // Auto-rotate testimonials
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials.length]);
 
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "home") {
@@ -206,28 +216,28 @@ export default function Home() {
       title: "Social Media Marketing",
       description: "Complete social media strategy, content creation, and community management to grow your brand presence.",
       features: ["Strategy Development", "Content Creation", "Community Management", "Analytics & Reporting"],
-      color: "from-pink-500 to-rose-500"
+      color: "from-slate-600 to-slate-700"
     },
     {
       icon: faChartLine,
       title: "Paid Ads Management",
       description: "ROI-focused advertising campaigns across Facebook, Instagram, Google, and LinkedIn platforms.",
       features: ["Campaign Setup", "Audience Targeting", "A/B Testing", "Performance Optimization"],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-600 to-slate-600"
     },
     {
       icon: faCode,
       title: "Website Development",
       description: "Modern, responsive websites built with latest technologies to showcase your brand professionally.",
       features: ["Responsive Design", "SEO Optimization", "Fast Loading", "Mobile-First Approach"],
-      color: "from-purple-500 to-indigo-500"
+      color: "from-gray-600 to-slate-700"
     },
     {
       icon: faServer,
       title: "IT Support & Solutions",
       description: "Comprehensive IT support including system maintenance, security, and technical consulting.",
       features: ["System Maintenance", "Security Solutions", "Technical Consulting", "24/7 Support"],
-      color: "from-green-500 to-emerald-500"
+      color: "from-slate-700 to-gray-700"
     }
   ];
 
@@ -283,42 +293,6 @@ export default function Home() {
     }
   ];
 
-  // Testimonials data
-  const testimonials = [
-    {
-      name: "Ahmed Hassan",
-      company: "Fashion Forward Co.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-      text: "Sara transformed our entire digital presence. Her combination of technical skills and marketing expertise is unmatched. Our sales increased by 400%!",
-      rating: 5,
-      service: "Web Development + Social Media"
-    },
-    {
-      name: "Fatima Ali",
-      company: "TechStart Solutions",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-      text: "Working with Sara was a game-changer. She built our platform from scratch and created a marketing strategy that got us 50K users in 6 months.",
-      rating: 5,
-      service: "Full Stack Development"
-    },
-    {
-      name: "Omar Sheikh",
-      company: "Digital Health Clinic",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      text: "Sara's IT solutions and digital marketing expertise helped us modernize our practice. Patient engagement increased by 250% and our systems run flawlessly.",
-      rating: 5,
-      service: "IT Solutions + Marketing"
-    },
-    {
-      name: "Zara Khan",
-      company: "Beauty Essentials",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-      text: "The e-commerce platform Sara built for us is incredible. Combined with her social media strategies, we've seen 300% growth in online sales.",
-      rating: 5,
-      service: "E-commerce + Social Media"
-    }
-  ];
-
   // Pricing plans
   const pricingPlans = [
     {
@@ -335,7 +309,7 @@ export default function Home() {
       ],
       popular: false,
       cta: "Get Started",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-600 to-slate-600"
     },
     {
       name: "Standard",
@@ -353,7 +327,7 @@ export default function Home() {
       ],
       popular: true,
       cta: "Most Popular",
-      color: "from-purple-500 to-pink-500"
+      color: "from-slate-700 to-gray-700"
     },
     {
       name: "Premium",
@@ -372,7 +346,7 @@ export default function Home() {
       ],
       popular: false,
       cta: "Contact Us",
-      color: "from-emerald-500 to-teal-500"
+      color: "from-gray-600 to-slate-700"
     }
   ];
 
@@ -474,7 +448,7 @@ export default function Home() {
               >
                 I combine the power of social media marketing with cutting-edge IT solutions 
                 to help businesses thrive in the digital world. From building stunning websites 
-                to creating viral social campaigns, I've got you covered.
+                to creating viral social campaigns, I&apos;ve got you covered.
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4"
@@ -539,21 +513,21 @@ export default function Home() {
 
                 {/* Floating Elements */}
                 <motion.div
-                  className="absolute -top-4 -left-4 w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center shadow-lg"
+                  className="absolute -top-4 -left-4 w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
                   <FontAwesomeIcon icon={faReact} className="text-2xl text-white" />
                 </motion.div>
                 <motion.div
-                  className="absolute -bottom-4 -right-4 w-20 h-20 bg-pink-500 rounded-2xl flex items-center justify-center shadow-lg"
+                  className="absolute -bottom-4 -right-4 w-20 h-20 bg-slate-600 rounded-2xl flex items-center justify-center shadow-lg"
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                 >
                   <FontAwesomeIcon icon={faInstagram} className="text-2xl text-white" />
                 </motion.div>
                 <motion.div
-                  className="absolute top-1/2 -left-8 w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center shadow-lg"
+                  className="absolute top-1/2 -left-8 w-16 h-16 bg-gray-600 rounded-xl flex items-center justify-center shadow-lg"
                   animate={{ x: [0, -5, 0] }}
                   transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
                 >
@@ -619,7 +593,7 @@ export default function Home() {
                 Where Creativity Meets Technology
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                With over 4 years of experience in digital marketing and IT solutions, I've helped 150+ businesses 
+                With over 4 years of experience in digital marketing and IT solutions, I&apos;ve helped 150+ businesses 
                 transform their digital presence. My unique approach combines data-driven marketing strategies 
                 with robust technical implementations.
               </p>
@@ -763,7 +737,7 @@ export default function Home() {
               Portfolio & Case Studies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real projects, real results - see how I've helped businesses transform their digital presence
+              Real projects, real results - see how I&apos;ve helped businesses transform their digital presence
             </p>
           </motion.div>
 
@@ -846,7 +820,7 @@ export default function Home() {
                   </div>
                   <FontAwesomeIcon icon={faQuoteLeft} className="text-4xl text-blue-500 mb-6" />
                   <p className="text-xl text-gray-700 mb-8 italic leading-relaxed">
-                    "{testimonials[currentTestimonial].text}"
+                    &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                   </p>
                   <div className="flex items-center justify-center">
                     <img
