@@ -812,6 +812,8 @@ export default function Home() {
                     <Image
                       src={item.image}
                       alt={item.title}
+                      width={500}
+                      height={300}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4">
@@ -898,6 +900,8 @@ export default function Home() {
                     <Image
                       src={testimonials[currentTestimonial].image}
                       alt={testimonials[currentTestimonial].name}
+                      width={64}
+                      height={64}
                       className="w-16 h-16 rounded-full mr-4"
                     />
                     <div className="text-left">
