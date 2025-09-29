@@ -55,7 +55,9 @@ export default function Home() {
   }>({ type: null, message: "" });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -81,7 +83,9 @@ export default function Home() {
       if (res.ok) {
         setSubmitStatus({
           type: "success",
-          message: responseData.message || "Quote request sent successfully! I'll get back to you within 24 hours.",
+          message:
+            responseData.message ||
+            "Quote request sent successfully! I&apos;ll get back to you within 24 hours.",
         });
         setFormData({
           name: "",
@@ -97,7 +101,7 @@ export default function Home() {
             responseData.error || "Failed to send request. Please try again.",
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "Network error. Please check your connection and try again.",
@@ -149,35 +153,39 @@ export default function Home() {
     {
       name: "Ahmed Hassan",
       company: "Fashion Forward Co.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-      text: "Sara transformed our entire digital presence. Her combination of technical skills and marketing expertise is unmatched. Our sales increased by 400%!",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+              text: "Sara transformed our entire digital presence. Her combination of technical skills and marketing expertise is unmatched. Our sales increased by 400%!",
       rating: 5,
-      service: "Web Development + Social Media"
+      service: "Web Development + Social Media",
     },
     {
       name: "Fatima Ali",
       company: "TechStart Solutions",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
       text: "Working with Sara was a game-changer. She built our platform from scratch and created a marketing strategy that got us 50K users in 6 months.",
       rating: 5,
-      service: "Full Stack Development"
+      service: "Full Stack Development",
     },
     {
       name: "Omar Sheikh",
       company: "Digital Health Clinic",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      text: "Sara's IT solutions and digital marketing expertise helped us modernize our practice. Patient engagement increased by 250% and our systems run flawlessly.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      text: "Sara&apos;s IT solutions and digital marketing expertise helped us modernize our practice. Patient engagement increased by 250% and our systems run flawlessly.",
       rating: 5,
-      service: "IT Solutions + Marketing"
+      service: "IT Solutions + Marketing",
     },
     {
       name: "Zara Khan",
       company: "Beauty Essentials",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-      text: "The e-commerce platform Sara built for us is incredible. Combined with her social media strategies, we've seen 300% growth in online sales.",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      text: "The e-commerce platform Sara built for us is incredible. Combined with her social media strategies, we&apos;ve seen 300% growth in online sales.",
       rating: 5,
-      service: "E-commerce + Social Media"
-    }
+      service: "E-commerce + Social Media",
+    },
   ];
 
   // Auto-rotate testimonials
@@ -210,14 +218,19 @@ export default function Home() {
   // Services data from portfolio.json with icons
   const services = data.services.slice(0, 4).map((service, index) => {
     const icons = [faBullhorn, faChartLine, faCode, faServer];
-    const colors = ["from-pink-500 to-rose-500", "from-blue-500 to-cyan-500", "from-purple-500 to-indigo-500", "from-green-500 to-emerald-500"];
-    
+    const colors = [
+      "from-pink-500 to-rose-500",
+      "from-blue-500 to-cyan-500",
+      "from-purple-500 to-indigo-500",
+      "from-green-500 to-emerald-500",
+    ];
+
     return {
       icon: icons[index],
       title: service.title,
       description: service.description,
       features: service.features,
-      color: colors[index]
+      color: colors[index],
     };
   });
 
@@ -229,16 +242,19 @@ export default function Home() {
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop",
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop",
       "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop",
     ];
-    
+
     return {
       title: project.title,
-      category: project.status === "Completed" ? "Completed Project" : "Ongoing Project",
+      category:
+        project.status === "Completed"
+          ? "Completed Project"
+          : "Ongoing Project",
       image: images[index % images.length],
       results: project.metrics,
       description: project.description,
-      tech: ["Social Media", "Digital Marketing", "Analytics", "Strategy"]
+      tech: ["Social Media", "Digital Marketing", "Analytics", "Strategy"],
     };
   });
 
@@ -248,17 +264,18 @@ export default function Home() {
       name: "Basic",
       price: "$599",
       period: "/month",
-      description: "Perfect for small businesses starting their digital journey",
+      description:
+        "Perfect for small businesses starting their digital journey",
       features: [
         "Social Media Management (2 platforms)",
         "Basic Website Maintenance",
         "Monthly Analytics Report",
         "Email Support",
-        "Content Creation (10 posts/month)"
+        "Content Creation (10 posts/month)",
       ],
       popular: false,
       cta: "Get Started",
-      color: "from-blue-600 to-slate-600"
+      color: "from-blue-600 to-slate-600",
     },
     {
       name: "Standard",
@@ -272,11 +289,11 @@ export default function Home() {
         "IT Support & Maintenance",
         "Content Creation (20 posts/month)",
         "Priority Support",
-        "Monthly Strategy Call"
+        "Monthly Strategy Call",
       ],
       popular: true,
       cta: "Most Popular",
-      color: "from-slate-700 to-gray-700"
+      color: "from-slate-700 to-gray-700",
     },
     {
       name: "Premium",
@@ -291,12 +308,12 @@ export default function Home() {
         "24/7 Priority Support",
         "Dedicated Account Manager",
         "Weekly Strategy Sessions",
-        "Unlimited Content Creation"
+        "Unlimited Content Creation",
       ],
       popular: false,
       cta: "Contact Us",
-      color: "from-gray-600 to-slate-700"
-    }
+      color: "from-gray-600 to-slate-700",
+    },
   ];
 
   return (
@@ -321,14 +338,22 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <motion.div 
+            <motion.div
               className="text-2xl font-bold theme-gradient-text"
               whileHover={{ scale: 1.05 }}
             >
               Sara Khan
             </motion.div>
             <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Services", "Portfolio", "Testimonials", "Pricing", "Contact"].map((item) => (
+              {[
+                "Home",
+                "About",
+                "Services",
+                "Portfolio",
+                "Testimonials",
+                "Pricing",
+                "Contact",
+              ].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -370,18 +395,16 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <motion.h1 
+              <motion.h1
                 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Hi, I'm{" "}
-                <span className="theme-gradient-text block">
-                  Sara Khan
-                </span>
+                <span className="theme-gradient-text block">Sara Khan</span>
               </motion.h1>
-              <motion.p 
+              <motion.p
                 className="text-2xl md:text-3xl text-gray-600 mb-8 font-medium"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -389,17 +412,18 @@ export default function Home() {
               >
                 {data.personalInfo.subtitle}
               </motion.p>
-              <motion.p 
+              <motion.p
                 className="text-lg text-gray-600 mb-10 max-w-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                I combine the power of social media marketing with cutting-edge IT solutions 
-                to help businesses thrive in the digital world. From building stunning websites 
-                to creating viral social campaigns, I've got you covered.
+                I combine the power of social media marketing with cutting-edge
+                IT solutions to help businesses thrive in the digital world.
+                From building stunning websites to creating viral social
+                campaigns, I&apos;ve got you covered.
               </motion.p>
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -440,19 +464,35 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-3xl flex items-center justify-center">
                       <div className="text-center p-8">
                         <div className="w-32 h-32 mx-auto mb-6 theme-gradient rounded-full flex items-center justify-center">
-                          <FontAwesomeIcon icon={faUser} className="text-4xl text-white" />
+                          <FontAwesomeIcon
+                            icon={faUser}
+                            className="text-4xl text-white"
+                          />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Sara Khan</h3>
-                        <p className="text-gray-600 mb-4">Digital Marketing & IT Expert</p>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          Sara Khan
+                        </h3>
+                        <p className="text-gray-600 mb-4">
+                          Digital Marketing & IT Expert
+                        </p>
                         <div className="flex justify-center space-x-4">
                           <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <FontAwesomeIcon icon={faBullhorn} className="text-blue-600" />
+                            <FontAwesomeIcon
+                              icon={faBullhorn}
+                              className="text-blue-600"
+                            />
                           </div>
                           <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                            <FontAwesomeIcon icon={faCode} className="text-purple-600" />
+                            <FontAwesomeIcon
+                              icon={faCode}
+                              className="text-purple-600"
+                            />
                           </div>
                           <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                            <FontAwesomeIcon icon={faServer} className="text-green-600" />
+                            <FontAwesomeIcon
+                              icon={faServer}
+                              className="text-green-600"
+                            />
                           </div>
                         </div>
                       </div>
@@ -466,21 +506,30 @@ export default function Home() {
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  <FontAwesomeIcon icon={faReact} className="text-2xl text-white" />
+                  <FontAwesomeIcon
+                    icon={faReact}
+                    className="text-2xl text-white"
+                  />
                 </motion.div>
                 <motion.div
                   className="absolute -bottom-4 -right-4 w-20 h-20 bg-slate-600 rounded-2xl flex items-center justify-center shadow-lg"
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                 >
-                  <FontAwesomeIcon icon={faInstagram} className="text-2xl text-white" />
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    className="text-2xl text-white"
+                  />
                 </motion.div>
                 <motion.div
                   className="absolute top-1/2 -left-8 w-16 h-16 bg-gray-600 rounded-xl flex items-center justify-center shadow-lg"
                   animate={{ x: [0, -5, 0] }}
                   transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
                 >
-                  <FontAwesomeIcon icon={faDatabase} className="text-xl text-white" />
+                  <FontAwesomeIcon
+                    icon={faDatabase}
+                    className="text-xl text-white"
+                  />
                 </motion.div>
               </div>
             </motion.div>
@@ -494,27 +543,42 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">150+</div>
+              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">
+                150+
+              </div>
               <div className="text-gray-600 font-medium">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">4+</div>
+              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">
+                4+
+              </div>
               <div className="text-gray-600 font-medium">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">200+</div>
-              <div className="text-gray-600 font-medium">Projects Completed</div>
+              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">
+                200+
+              </div>
+              <div className="text-gray-600 font-medium">
+                Projects Completed
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">99%</div>
-              <div className="text-gray-600 font-medium">Client Satisfaction</div>
+              <div className="text-3xl md:text-4xl font-bold theme-gradient-text">
+                99%
+              </div>
+              <div className="text-gray-600 font-medium">
+                Client Satisfaction
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-20 bg-white/50 backdrop-blur-sm">
+      <section
+        id="about"
+        className="relative py-20 bg-white/50 backdrop-blur-sm"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -527,7 +591,8 @@ export default function Home() {
               About Sara Khan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A passionate digital expert who bridges the gap between creative marketing and technical excellence
+              A passionate digital expert who bridges the gap between creative
+              marketing and technical excellence
             </p>
           </motion.div>
 
@@ -542,29 +607,46 @@ export default function Home() {
                 Where Creativity Meets Technology
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                With over 4 years of experience in digital marketing and IT solutions, I've helped 150+ businesses 
-                transform their digital presence. My unique approach combines data-driven marketing strategies 
-                with robust technical implementations.
+                With over 4 years of experience in digital marketing and IT
+                solutions, I&apos;ve helped 150+ businesses transform their digital
+                presence. My unique approach combines data-driven marketing
+                strategies with robust technical implementations.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Whether you need a viral social media campaign, a custom web application, or complete IT infrastructure 
-                management, I bring both the creative vision and technical expertise to make it happen.
+                Whether you need a viral social media campaign, a custom web
+                application, or complete IT infrastructure management, I bring
+                both the creative vision and technical expertise to make it
+                happen.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
                   <div className="w-16 h-16 theme-gradient rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <FontAwesomeIcon icon={faBullhorn} className="text-2xl text-white" />
+                    <FontAwesomeIcon
+                      icon={faBullhorn}
+                      className="text-2xl text-white"
+                    />
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2">Marketing Expert</h4>
-                  <p className="text-sm text-gray-600">Social media strategies that drive real results</p>
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Marketing Expert
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Social media strategies that drive real results
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
                   <div className="w-16 h-16 theme-gradient rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <FontAwesomeIcon icon={faCode} className="text-2xl text-white" />
+                    <FontAwesomeIcon
+                      icon={faCode}
+                      className="text-2xl text-white"
+                    />
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2">Tech Specialist</h4>
-                  <p className="text-sm text-gray-600">Custom solutions built with modern technologies</p>
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Tech Specialist
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Custom solutions built with modern technologies
+                  </p>
                 </div>
               </div>
 
@@ -575,7 +657,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
               >
                 <FontAwesomeIcon icon={faHandshake} />
-                Let's Work Together
+                Let&apos;s Work Together
               </motion.button>
             </motion.div>
 
@@ -587,7 +669,9 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <div className="bg-white rounded-3xl p-8 shadow-2xl">
-                <h4 className="text-2xl font-bold text-gray-900 mb-6">My Expertise</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">
+                  My Expertise
+                </h4>
                 <div className="space-y-4">
                   {[
                     { skill: "Social Media Marketing", level: 95 },
@@ -597,7 +681,9 @@ export default function Home() {
                   ].map((item, index) => (
                     <div key={index}>
                       <div className="flex justify-between mb-2">
-                        <span className="font-medium text-gray-700">{item.skill}</span>
+                        <span className="font-medium text-gray-700">
+                          {item.skill}
+                        </span>
                         <span className="text-gray-600">{item.level}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
@@ -632,7 +718,8 @@ export default function Home() {
               Services & Packages
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From social media marketing to custom web development and IT support - I offer comprehensive digital solutions
+              From social media marketing to custom web development and IT
+              support - I offer comprehensive digital solutions
             </p>
           </motion.div>
 
@@ -648,18 +735,33 @@ export default function Home() {
               >
                 <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden">
                   {/* Animated Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  />
+
                   <div className="relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <FontAwesomeIcon icon={service.icon} className="text-2xl text-white" />
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <FontAwesomeIcon
+                        icon={service.icon}
+                        className="text-2xl text-white"
+                      />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      {service.title}
+                    </h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />
+                        <li
+                          key={idx}
+                          className="flex items-center text-sm text-gray-600"
+                        >
+                          <FontAwesomeIcon
+                            icon={faCheck}
+                            className="text-green-500 mr-2"
+                          />
                           {feature}
                         </li>
                       ))}
@@ -673,7 +775,10 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="relative py-20 bg-white/50 backdrop-blur-sm">
+      <section
+        id="portfolio"
+        className="relative py-20 bg-white/50 backdrop-blur-sm"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -686,7 +791,8 @@ export default function Home() {
               Portfolio & Case Studies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real projects, real results - see how I've helped businesses transform their digital presence
+              Real projects, real results - see how I&apos;ve helped businesses
+              transform their digital presence
             </p>
           </motion.div>
 
@@ -715,12 +821,19 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {item.title}
+                    </h3>
                     <p className="text-gray-600 mb-4">{item.description}</p>
-                    <div className="theme-gradient-text font-bold text-lg mb-4">{item.results}</div>
+                    <div className="theme-gradient-text font-bold text-lg mb-4">
+                      {item.results}
+                    </div>
                     <div className="flex flex-wrap gap-2">
                       {item.tech.map((tech, idx) => (
-                        <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
+                        <span
+                          key={idx}
+                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium"
+                        >
                           {tech}
                         </span>
                       ))}
@@ -746,9 +859,9 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Client Reviews
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear what my clients say about working with me
-            </p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Hear what my clients say about working with me
+              </p>
           </motion.div>
 
           <div className="relative max-w-4xl mx-auto">
@@ -763,13 +876,22 @@ export default function Home() {
               >
                 <div className="text-center">
                   <div className="flex justify-center mb-6">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <FontAwesomeIcon key={i} icon={faStar} className="text-yellow-400 text-xl mr-1" />
-                    ))}
+                    {[...Array(testimonials[currentTestimonial].rating)].map(
+                      (_, i) => (
+                        <FontAwesomeIcon
+                          key={i}
+                          icon={faStar}
+                          className="text-yellow-400 text-xl mr-1"
+                        />
+                      )
+                    )}
                   </div>
-                  <FontAwesomeIcon icon={faQuoteLeft} className="text-4xl text-blue-500 mb-6" />
+                  <FontAwesomeIcon
+                    icon={faQuoteLeft}
+                    className="text-4xl text-blue-500 mb-6"
+                  />
                   <p className="text-xl text-gray-700 mb-8 italic leading-relaxed">
-                   {testimonials[currentTestimonial].text}
+                    {testimonials[currentTestimonial].text}
                   </p>
                   <div className="flex items-center justify-center">
                     <img
@@ -778,9 +900,15 @@ export default function Home() {
                       className="w-16 h-16 rounded-full mr-4"
                     />
                     <div className="text-left">
-                      <div className="font-bold text-gray-900 text-lg">{testimonials[currentTestimonial].name}</div>
-                      <div className="text-gray-600">{testimonials[currentTestimonial].company}</div>
-                      <div className="text-sm text-blue-600 font-medium">{testimonials[currentTestimonial].service}</div>
+                      <div className="font-bold text-gray-900 text-lg">
+                        {testimonials[currentTestimonial].name}
+                      </div>
+                      <div className="text-gray-600">
+                        {testimonials[currentTestimonial].company}
+                      </div>
+                      <div className="text-sm text-blue-600 font-medium">
+                        {testimonials[currentTestimonial].service}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -794,7 +922,9 @@ export default function Home() {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial ? 'bg-blue-600 w-8' : 'bg-gray-300'
+                    index === currentTestimonial
+                      ? "bg-blue-600 w-8"
+                      : "bg-gray-300"
                   }`}
                 />
               ))}
@@ -804,7 +934,10 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="relative py-20 bg-white/50 backdrop-blur-sm">
+      <section
+        id="pricing"
+        className="relative py-20 bg-white/50 backdrop-blur-sm"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -830,7 +963,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 ${
-                  plan.popular ? 'border-2 border-blue-500 scale-105' : 'border border-gray-200'
+                  plan.popular
+                    ? "border-2 border-blue-500 scale-105"
+                    : "border border-gray-200"
                 }`}
               >
                 {plan.popular && (
@@ -840,11 +975,15 @@ export default function Home() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </h3>
                   <div className="flex items-baseline justify-center mb-4">
-                    <span className={`text-5xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
+                    <span
+                      className={`text-5xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}
+                    >
                       {plan.price}
                     </span>
                     <span className="text-gray-600 ml-2">{plan.period}</span>
@@ -855,7 +994,10 @@ export default function Home() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
-                      <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-3" />
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className="text-green-500 mr-3"
+                      />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -866,7 +1008,7 @@ export default function Home() {
                   className={`w-full py-4 rounded-full font-semibold transition-all duration-300 ${
                     plan.popular
                       ? `bg-gradient-to-r ${plan.color} text-white hover:scale-105`
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
                   {plan.cta}
@@ -891,7 +1033,8 @@ export default function Home() {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Let's discuss how I can help transform your digital presence and grow your business
+              Let&apos;s discuss how I can help transform your digital presence and
+              grow your business
             </p>
           </motion.div>
 
@@ -911,7 +1054,9 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-gray-300">{data.personalInfo.email}</div>
+                    <div className="text-gray-300">
+                      {data.personalInfo.email}
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -920,16 +1065,23 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-gray-300">{data.personalInfo.phone}</div>
+                    <div className="text-gray-300">
+                      {data.personalInfo.phone}
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <div className="w-12 h-12 theme-gradient rounded-full flex items-center justify-center mr-4">
-                    <FontAwesomeIcon icon={faLocationDot} className="text-white" />
+                    <FontAwesomeIcon
+                      icon={faLocationDot}
+                      className="text-white"
+                    />
                   </div>
                   <div>
                     <div className="font-semibold">Location</div>
-                    <div className="text-gray-300">{data.personalInfo.location}</div>
+                    <div className="text-gray-300">
+                      {data.personalInfo.location}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -963,10 +1115,13 @@ export default function Home() {
               className="bg-white rounded-3xl p-8 text-gray-900"
             >
               <div className="flex items-center mb-6">
-                <FontAwesomeIcon icon={faComments} className="text-2xl text-blue-600 mr-3" />
+                <FontAwesomeIcon
+                  icon={faComments}
+                  className="text-2xl text-blue-600 mr-3"
+                />
                 <h3 className="text-2xl font-bold">Get Your Free Quote</h3>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 {submitStatus.type && (
                   <div
@@ -976,13 +1131,18 @@ export default function Home() {
                         : "bg-red-100 text-red-700 border border-red-200"
                     }`}
                   >
-                    <p className="text-sm font-medium">{submitStatus.message}</p>
+                    <p className="text-sm font-medium">
+                      {submitStatus.message}
+                    </p>
                   </div>
                 )}
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       <FontAwesomeIcon icon={faUser} className="mr-2" />
                       Your Name
                     </label>
@@ -999,7 +1159,10 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                       Email Address
                     </label>
@@ -1019,7 +1182,10 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="service"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       <FontAwesomeIcon icon={faCog} className="mr-2" />
                       Service Needed
                     </label>
@@ -1033,16 +1199,28 @@ export default function Home() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     >
                       <option value="">Select a service</option>
-                      <option value="social-media">Social Media Marketing</option>
-                      <option value="web-development">Website Development</option>
+                      <option value="social-media">
+                        Social Media Marketing
+                      </option>
+                      <option value="web-development">
+                        Website Development
+                      </option>
                       <option value="it-support">IT Support & Solutions</option>
                       <option value="paid-ads">Paid Advertising</option>
-                      <option value="full-package">Complete Digital Package</option>
+                      <option value="full-package">
+                        Complete Digital Package
+                      </option>
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                      <FontAwesomeIcon icon={faQuestionCircle} className="mr-2" />
+                    <label
+                      htmlFor="budget"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      <FontAwesomeIcon
+                        icon={faQuestionCircle}
+                        className="mr-2"
+                      />
                       Budget Range
                     </label>
                     <select
@@ -1064,7 +1242,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     <FontAwesomeIcon icon={faComments} className="mr-2" />
                     Project Details
                   </label>
@@ -1094,7 +1275,9 @@ export default function Home() {
                     icon={faPaperPlane}
                     className={isSubmitting ? "animate-pulse" : ""}
                   />
-                  {isSubmitting ? "Sending Quote Request..." : "Get My Free Quote"}
+                  {isSubmitting
+                    ? "Sending Quote Request..."
+                    : "Get My Free Quote"}
                 </button>
               </form>
             </motion.div>
@@ -1111,20 +1294,37 @@ export default function Home() {
                 Sara Khan
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                Digital Marketing & IT Solutions Expert helping businesses thrive in the digital world 
-                through creative strategies and technical excellence.
+                Digital Marketing & IT Solutions Expert helping businesses
+                thrive in the digital world through creative strategies and
+                technical excellence.
               </p>
               <div className="flex space-x-4">
-                <a href={data.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
+                <a
+                  href={data.personalInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+                >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href={data.personalInfo.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors duration-300">
+                <a
+                  href={data.personalInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors duration-300"
+                >
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-300">
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-300"
+                >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors duration-300">
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors duration-300"
+                >
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
               </div>
@@ -1132,24 +1332,83 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#services" className="hover:text-white transition-colors duration-300">Social Media Marketing</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors duration-300">Website Development</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors duration-300">IT Support</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors duration-300">Paid Advertising</a></li>
+                <li>
+                  <a
+                    href="#services"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Social Media Marketing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Website Development
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    IT Support
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Paid Advertising
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#about" className="hover:text-white transition-colors duration-300">About</a></li>
-                <li><a href="#portfolio" className="hover:text-white transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#pricing" className="hover:text-white transition-colors duration-300">Pricing</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors duration-300">Contact</a></li>
+                <li>
+                  <a
+                    href="#about"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#portfolio"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Sara Khan. All rights reserved. Built with ❤️ for growing businesses.</p>
+            <p>
+              &copy; 2024 Sara Khan. All rights reserved. Built with ❤️ for
+              growing businesses.
+            </p>
           </div>
         </div>
       </footer>
