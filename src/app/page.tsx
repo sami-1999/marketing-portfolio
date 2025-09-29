@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -401,7 +402,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Hi, I'm{" "}
+                Hi, I&apos;m{" "}
                 <span className="theme-gradient-text block">Sara Khan</span>
               </motion.h1>
               <motion.p
@@ -808,7 +809,7 @@ export default function Home() {
               >
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   <div className="relative overflow-hidden">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -894,7 +895,7 @@ export default function Home() {
                     {testimonials[currentTestimonial].text}
                   </p>
                   <div className="flex items-center justify-center">
-                    <img
+                    <Image
                       src={testimonials[currentTestimonial].image}
                       alt={testimonials[currentTestimonial].name}
                       className="w-16 h-16 rounded-full mr-4"
